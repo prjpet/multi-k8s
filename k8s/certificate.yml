@@ -7,8 +7,9 @@ spec:
     issuerRef:
         name: letsencrypt-prod
         kind: ClusterIssuer
-    commonName: k8s.securitymindset.eu
+    commonName: securitymindset.eu
     dnsNames:
+        - securitymindset.eu
         - k8s.securitymindset.eu
         - www.k8s.securitymindset.eu
     acme:
@@ -16,5 +17,6 @@ spec:
             http01:
                 ingressClass: nginx
             domains:
+                - securitymindset.eu
                 - k8s.securitymindset.eu
                 - www.k8s.securitymindset.eu
